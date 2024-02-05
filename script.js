@@ -65,6 +65,7 @@ $(function(){
   $('#message').blur(function(){
     inputCheck();
   });
+  // 正解はblurではなくclick?
   $('#agree').blur(function(){
     inputCheck();
   });
@@ -102,7 +103,7 @@ $(function(){
       // エラーあり
       $('#furigana').css('background-color', '#f79999');
       error = true;
-      message += 'フリガナを入力してください。\n'
+      message += 'フリガナを入力してください。\n';
     } else {
       // エラーなし
       $('#furigana').css('background-color', '#fafafa');
@@ -112,7 +113,7 @@ $(function(){
       // エラーあり
       $('#message').css('background-color', '#f79999');
       error = true;
-      message += 'お名前を入力してください。\n'
+      message += 'お名前を入力してください。\n';
     } else {
       // エラーなし
       $('#message').css('background-color', '#fafafa');
@@ -159,7 +160,7 @@ $(function(){
 
     //エラーの有無で送信ボタンを切り替え
     if (error == true) {
-      $('#submit').attr('src', 'images/button-submit.png');
+      $('#submit').attr('src', 'images/button-submit.png')
     } else {
       $('#submit').attr('src', 'images/button-submit-blue.png')
     }

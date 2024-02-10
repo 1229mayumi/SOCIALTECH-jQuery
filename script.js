@@ -66,7 +66,7 @@ $(function(){
     inputCheck();
   });
   // 正解はblurではなくclick?
-  $('#agree').blur(function(){
+  $('#agree').click(function(){
     inputCheck();
   });
 
@@ -91,12 +91,12 @@ $(function(){
     // お名前のチェック
     if ($('#name').val() == '') {
       // エラーあり
-      $('#name').css('background-color', '#f79999');
+      // $('#name').css('background-color', '#f79999');
       error = true;
       message += 'お名前を入力してください。\n'
     } else {
       // エラーなし
-      $('#name').css('background-color', '#fafafa');
+      // $('#name').css('background-color', '#fafafa');
     }
     // フリガナのチェック
     if ($('#furigana').val() == '') {
@@ -120,7 +120,7 @@ $(function(){
     }
 
     // メールアドレスのチェック
-    if ($('#email').val() == '' || $('#email').val().indexof('@') == -1 || $('#email').val().indexof('.') == -1) {
+    if ($('#email').val() == '' || $('#email').val().indexOf('@') == -1 || $('#email').val().indexOf('.') == -1) {
       //エラーあり
       $('emaik').css('background-color', '#f79999');
       error = true;

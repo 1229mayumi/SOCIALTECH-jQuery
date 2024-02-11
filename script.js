@@ -96,12 +96,12 @@ $(function () {
     // お名前のチェック
     if ($("#name").val() == "") {
       // エラーあり
-      // $('#name').css('background-color', '#f79999');
+      $("#name").css("background-color", "#f79999");
       error = true;
       message += "お名前を入力してください。\n";
     } else {
       // エラーなし
-      // $('#name').css('background-color', '#fafafa');
+      $("#name").css("background-color", "#fafafa");
     }
     // フリガナのチェック
     if ($("#furigana").val() == "") {
@@ -131,7 +131,7 @@ $(function () {
       $("#email").val().indexOf(".") == -1
     ) {
       //エラーあり
-      $("emaik").css("background-color", "#f79999");
+      $("#email").css("background-color", "#f79999");
       error = true;
       message +=
         "メールアドレスが未記入、または「＠」「.]が含まれていません。\n";
